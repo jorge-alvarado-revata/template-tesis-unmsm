@@ -1,0 +1,36 @@
+\vskip 35pt
+\SingleSpacing 
+\babel@toc {english}{}
+\contentsline {chapter}{{Agradecimientos}}{ii}{Doc-Start}%
+\contentsline {chapter}{{Dedicatoria}}{iii}{Doc-Start}%
+\contentsline {chapter}{{Resumen}}{iv}{chapter*.1}%
+\babel@toc {english}{}
+\contentsline {chapter}{{Abstract}}{v}{chapter*.2}%
+\babel@toc {spanish}{}
+\contentsline {chapter}{Tabla de Contenido}{vi}{section*.3}%
+\contentsline {chapter}{\'{I}ndice de figuras}{vii}{section*.4}%
+\contentsline {chapter}{\'{I}ndice de tablas}{viii}{section*.5}%
+\contentsline {chapter}{\chapternumberline {1}Planteamiento del problema}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Situación problemática}{1}{section.1.1}%
+\contentsline {subsection}{Importancia}{1}{subsection*.6}%
+\contentsline {subsection}{Novedad}{1}{subsection*.7}%
+\contentsline {subsection}{Viabilidad}{1}{subsection*.8}%
+\contentsline {section}{\numberline {1.2}Formulación del problema}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Justificación de la Investigación}{2}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Objetivos de la Investigación}{2}{section.1.4}%
+\contentsline {subsection}{Objetivo general}{2}{subsection*.9}%
+\contentsline {subsection}{Objetivo Específicos}{2}{subsection*.10}%
+\contentsline {chapter}{\chapternumberline {2}Marco teórico}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Antecedentes del problema}{3}{section.2.1}%
+\contentsline {subsection}{Sección primera}{3}{subsection*.11}%
+\contentsline {subsection}{Siguiente sección}{4}{subsection*.12}%
+\contentsline {section}{\numberline {2.2}Bases Teóricas Generales}{5}{section.2.2}%
+\contentsline {subsection}{Sub Seccion}{5}{subsection*.13}%
+\contentsline {subsubsection}{Sub de Sub Seccion}{5}{subsubsection*.14}%
+\contentsline {subsubsection}{Sub2 de Sub Seccion}{5}{subsubsection*.15}%
+\contentsline {section}{\numberline {2.3}Estado del Arte}{9}{section.2.3}%
+\contentsline {subsection}{Sub Seccion}{9}{subsection*.20}%
+\contentsline {subsection}{Algoritmo de Máximo común sub-grafo}{10}{subsection*.24}%
+\contentsline {subsection}{Cuantificación de relaciones y nodos}{11}{subsection*.25}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{13}{section*.27}%
+\renewcommand {\chaptername }{Appendix} 
