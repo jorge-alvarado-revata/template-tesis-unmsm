@@ -1,31 +1,31 @@
-*.fdb_latexmk
-*.nlo
-*.fls
-*.gz
-*.aux 
-*.toc
-*.log
-*.nav
-*.vrb
-*.snm
-*.tuc
+.fdb_latexmk
+.nlo
+.fls
+.gz
+.aux 
+.toc
+.log
+.nav
+.vrb
+.snm
+.tuc
 # (La)TeX:
 # Lists:
-*.lof
-*.lot
+.lof
+.lot
 # Index:
-*.idx
-*.ind
-*.ilg
+.idx
+.ind
+.ilg
 # Glossary:
-*.glo
-*.gls
-*.glg
+.glo
+.gls
+.glg
 # Bib(La)TeX/Biber:
-*.bbl
-*.blg
-*.bcf
-*.run.xml
-*-blx.bib
+.bbl
+.blg
+.bcf
+.run.xml
+-blx.bib
 # hyperref:
-*.out
+.out
