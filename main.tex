@@ -1,0 +1,130 @@
+% !TEX encoding = UTF-8 Unicode
+
+%%%%%%%%%%%%
+%% Please rename this main.tex file and the output PDF to
+%% [lastname_firstname_graduationyear]
+%% before submission.
+%%
+%% This .tex file is for use with BibLaTeX. Please use
+%% main-bibtex.tex instead if you prefer BibTeX.
+%%%%%%%%%%%%
+
+\documentclass[12pt,spanish]{sm_thesis}
+\usepackage[english, spanish]{babel}
+\usepackage{enumitem,kantlipsum}
+\usepackage{tabularx}
+\usepackage[bookmarksopen=true,bookmarksnumbered=true,bookmarksopenlevel=4]{hyperref}
+
+
+\renewcommand{\baselinestretch}{1.5}
+
+\newenvironment{poliabstract}[1]
+  {\renewcommand{\abstractname}{#1}\begin{abstract}}
+  {\end{abstract}}
+
+
+\begin{document}
+
+% Do remember to remove the square bracket!
+
+% Titulo de la tesis:
+\title{Un ejemplo de Tesis para obtener el grado de Ingeniería en UNMSM}
+
+% Autor:
+\author{Juan Perez}
+
+% Nombres y apellidos del asesor:
+\asesoruno{Docente Perez}
+
+% Nombres y apellidos del segundo asesor,
+% si no existe borrar o comentar la linea:
+ \asesordos{}
+
+% Nombres y apellidos del Presidente del Jurado:
+ \presidente{}
+
+% Nombres y apellidos del Tercer Jurado si hay sólo un asesor:
+% \jurado{Neil Brolic Fraine}
+
+% Definir el título o el grado:
+% Ejemplos:
+% \grado{título profesional de Ingeniero Industrial}
+% \grado{de Maestro en Ingeniería Industrial}
+% \grado{de Doctor en Ingeniería Industrial}
+\grado{título profesional de Ingeniero de Sistemas}
+
+% Definir su código de alumno:
+\codigo{0000000}
+
+% Mes y año de sustentación
+\sustentacion{Junio 2022}
+
+\maketitle
+
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+
+\providecommand{\Palabrasclave}[1]
+{
+  \small	
+  \textbf{\textit{Palabras clave---}} #1
+}
+
+
+\providecommand{\resumen}[1]
+{	
+  {\extrachapter{Resumen}}
+}
+
+\begin{agradecimientos} 
+
+Sección de agradecimiento. Agradezco sinceramente a las personas que hicieron posible esta tesis. 
+
+\end{agradecimientos}
+
+\begin{dedicatoria} 	 
+Seccion de dedicatoria del documento.
+\end{dedicatoria}
+
+
+\begin{resumen}
+
+Resumen en diez lineas del objetivo principal de la tesis. El resumen debe ser concreto, en donde se indique una visión concreta de lo que se pretende con el estudio. Principalmente establecer el contexto, el problema, las tecnicas utilizadas, la propuesta y finalmente los resultados esperados. Corresponde a un texto fiel respecto a lo que se espera encontrar en el cuerpo del documento, de manera que sirva de introducción como también de invitación a la lectura.
+
+\Palabrasclave{palabras claves, palabras reservadas, terminos de búsqueda, tesis.}
+
+\end{resumen}
+
+\selectlanguage{english}
+\begin{poliabstract}{Abstract}
+
+Summary in ten lines of the main objective of the thesis. The summary must be concrete, indicating a specific vision of what is intended with the study. Mainly establish the context, the problem, the techniques used, the proposal and finally the expected results. It corresponds to a faithful text regarding what is expected to be found in the body of the document, so that it serves as an introduction as well as an invitation to read.
+
+\keywords{keywords, reserved words, search terms, thesis.}
+
+\end{poliabstract}
+
+\selectlanguage{spanish}
+\tableofcontents
+\listoffigures
+\listoftables
+\printnomenclature
+
+\mainmatter
+
+\include{chapter1}
+\include{chapter2}
+% \include{chapter3}
+% \include{chapter4}
+% \include{chapter5}
+%\bibliographystyle{utecbibstyle}
+\bibliographystyle{apalike2}
+\bibliography{biblio}
+
+\appendix
+\include{chapter6}
+
+\end{document}

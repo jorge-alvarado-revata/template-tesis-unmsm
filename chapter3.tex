@@ -1,0 +1,250 @@
+\chapter{Hipotesis y Variables}
+
+
+\section{Hipotesis General}
+
+Como se ha identificado existe por lo menos dos enfoques para identificar relaciones de los planes de estudio con el objetivo de incorporar innovaciones en las mismas sobre la influencia de curriculas internacionales. Estos dos enfoques son: a) Áreas de conocimientos y b) Competencias. 
+
+La presente investigación pretende encontrar información esencialmente en el modo de áreas de conocimientos de los planes de estudio de sistemas e informática de universidades de una pequeña muestra, la hipotesis central propone identificar si existe similitud entre los planes de estudio de distintas escuelas independiente del nombre de la carrera y si se asemejan a planes o guias internacionales independiente de la fecha o etapa de evolución. 
+
+La identificación de estas relaciones de áreas de conocimiento requerirá cierto tratamiento de la información de los planes de estudio y de las curriculas internacionales. Se limitará el alcance de la información usada y se aplicará un método para agrupar los cursos similares o pertenecientes a un mismo cuerpo de conocimiento con un solo identificador o  nombre que nos permitirá reconocer como el mismo elemento independiente del plan de estudio o de la guía a comparar. 
+
+En este punto existe cierto grado de flexibilidad que se establece en la codificación del curso o área de conocimiento. Como primer alcance se utilizará información pública de los planes de estudio así como información pública de guias internacionales. La información sobre cursos y sus dependencias se modelarán como grafos y enlaces.
+
+Se considera el uso del algoritmo Máximo Común Subgrafo así como operaciones de proporcionalidad, para cuantificar y visualizar relaciones o posibles relaciones entre programas de estudio. 
+
+Nuestra hipótesis general la podemos expresar de la siguiente manera:
+
+\blockquote{
+
+	Dado un modelo en grafos de un plan de estudios o una guía internacional se identifica una relación entre un plan de estudios $G_1$ y $G_2$ como la metrica entre ambos modelos usando el concepto de similaridad grafos. De modo que la similaridad es significativa. 
+
+}
+
+Definiremos un modelamiento siguiendo los siguientes pasos:
+
+\begin{enumerate}
+
+
+	\item Se considera el marco teórico de sub-grafos y coincidencia de gráfos para modelar los planes de estudio y/o curriculas (Referentes), reproduciendo una comparación usando como métrica la similaridad entre subgrafos. Visualizaremos también el maximo común subgrafo conectado como un elemento de similitud entre planes y/o curriculas, así como las relaciones en común para identificar las similitudes o diferencias.
+
+	\item La data será depurada y/o preparada para centrarse en los cursos en contexto informático y de matemáticas, se descarta cursos de gestión, ciencia general y sociales a pesar que son temas que influyen en las competencias modernas, sin embargo lo que se busca es encontrar la similaridad en áreas centrales de la disciplina informática en las implementaciones académicas peruanas. 
+
+	\item Se modela los planes o guías que usaremos para el alcance de la investigación en grafos y se usará un diccionario de nombres que agrupen áreas comunes o cursos similares a esto lo denominamos establecer un indice. Se crea una Tabla de Comparación. Tanto El Plan como el Referente tendrán una tabla de comparación que permita identificarlos usando un nemónico (indice) que represente el curso o área de conocimiento que abarca la oferta educativa.
+
+	\item Se aplicara los algoritmos a la codificación de los planes y guías, se realizará las comparaciones usando dos modelos: modelo 1) se identifica los cursos de los planes de estudio con equivalencias a ejemplos de curriculas internacionales, en caso de curriculas entre universidades se crea un Id y nombre común a los cursos equivalentes y se modelan los grafos usando ese identificador. En el modelo el mapeo de relaciones se respeta la matriz de relaciones original de la curricula internacional. En el modelo 2) Se ambos grafos mantienen sus relaciones originales. Se presume que bajo esa premisa el subgrafo conectado sea menor o incluso no se pueda identificar.
+
+	\item Cuantificar el número de nodos y relaciones por cada sub-grafo de comparación y tabular los resultados. Estos datos nos permitirán cuantificar tanto los cambios en las curriculas como las similitudes entre los planes existentes y las propuestas educativas locales. Cuantificar los enlaces comunes entre ambos grafos para visibilizar la relaciones.
+
+	\item Mostrar la evidencia númerica que apruebe o rechace la hipótesis general y secundarias.
+
+\end{enumerate}
+
+El alcance de esta investigación solo considera las áreas de conocimiento en común entre las propuestas educativas de ingeniería y la informática y planes internacionales o comparación entre planes de una o entre instituciones. No se aborda el campo de las competencias pues no hay información pública disponible. En el caso de las áreas de conocimiento, se compararan a nivel de cursos, estos se infieren de revisión de planes de estudio de los cursos que tengan información pública. 
+
+
+\section{Hipotesis Específicas}
+
+A continuación usaremos la hipotesis principal para responder preguntas vinculadas con el tema que afectan el proceso de desarrollo de las profesiones universitarias en informática. Esta pregunta principal la podemos desagregar en las preguntas secundarias que generan las hipotesis específicas.
+
+\begin{enumerate}
+
+
+
+	\item P2. (H2) Dado un grafo $G_1$ que representa una profesión de ingeniería de sistemas u otra propuesta existente en la oferta peruana y $G_2$ un referente internacional de ACM/IEEE u otro. Se identifica que la similaridad es significativa. 
+
+	\item P3. (H3) Dado un grafo $G_1$ que representa el plan de estudio de una carrera vinculada a la informática de un año X y $G_2$ un plan de la misma carrera pero del año Y. Se Identifica que la similaridad es significativa. Una modificación también podría permitir comparar dos carreras locales de distintos años y validar la similaridad.
+
+
+\end{enumerate}
+
+	Dado que usaremos una métrica basada en el Máximo común subgrafo, el concepto de significancia pasa por establecer un valor que indique la presencia o no de similaridad. El concepto de similaridad se definió en el capitulo 2 \ref{def:similaridad} , en este caso tomaremos un valor $ \zeta > 0.2 $ como el valor que indique o no la presencia de significancia de similaridad. Es decir una métrica que supere ese valor indicaría cierto grado de similaridad, uno que sea menor, indicaría una similaridad no significativa.
+
+	Otro elemento que estamos utilizando es \ref{def:cuantificacion} la proporción en una de los planes o guías respecto a la cantidad de nodos en común. En este caso usaremos una proporción $0.1$ para indicar cierto grado de similaridad por nodos. 
+
+\section{Identificación de variables}
+
+Se define las siguientes variables para el presente estudio. 
+
+Plan: Un plan de estudios estará compuesto por unidades de enseñanza que serán cursos que representan parte o un área de conocimiento. Se establecerá que cada plan de estudio representa un grafo donde cada nodo será etiquetado con un identificado que a su vez representa un nombre de un área o sub-área de conocimiento dentro de la informática. 
+
+Un Referente: Un referente es similar a un plan de estudios pero obtenido de los modelos propuestos en los referentes internaciones. Estos son un conjunto de acuerdos de áreas de conocimientos que representan los consensos para orientar la enseñanza en la informática. Cada referente tiene un tiempo de creación y una o varias instituciones tutelares. Se modela usando como datos un nombre que será común y con este nombre se buscará la equivalencia en caso se realice comparaciones.
+
+Un curso: Un curso será una propuesta educativa que aparece en un Plan o Referente y que aborda un conjunto de $UnidadConocimiento$ que corresponde a un mapeo estandarizado de unidad de conocimiento que pertence a la clasificación de una guía internacional. Un curso estára formado por varios nodos cada uno de ellos es una $UnidadConocimiento$
+
+Máximo común subgrafo (MCS): Es un sub-grafo que representa relaciones y cursos que conforman un plan o un referente, representa lo común a ambos. El subgrafo resultante tendrá dos valores que nos pueden dar información respecto a los elementos comunes entre comparaciones. Este se representará como una tupla de dos valores $(numNodos, numRelaciones)$. En sentido práctico usaremos para identificar un subgrafo el concepto de subgrafo conectado para poder encontrar el elemento más grande común a dos comparaciones.
+
+Distancia de grafos: Es una medida entre 0 y 1 que a menor medida indica la similaridad entre ambos grafos. Considerando subgrafos inducidos conectados o no. Tanta la distancia como el MCS están vinculados por lo que la librería o función que usemos para calcular la distancia deberá elegirse adecuadamente para comparar y encontrar grafos inducidos conectados o no. En la experimentación se explicará explicitamente esa diferencia. La distancia y similitud son dos valores complementarios, a menor distancia significa que los grafos son más similares por lo que la medida de similitud se considera complementaria a 1 del valor de la medida de la distancia entre los grafos.
+
+
+\section{Operacionalización de variables}
+
+
+\begin{table}[h!]
+\centering
+\caption{Matriz de operacionalización de variables}
+
+\begin{tabularx}{1.0\textwidth}
+{ 
+  | >{\raggedleft\arraybackslash}X 
+  | >{\raggedleft\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X  |}
+
+\hline
+Tipo de Variable&Variable&Definición conceptual&Valores finales&Escala&Naturaleza\\
+\hline
+\scriptsize
+Independiente&
+\scriptsize
+Plan&
+\scriptsize
+Programa o plan de estudios&
+\scriptsize
+Grafo&
+\scriptsize
+Tupla&
+\scriptsize
+Cuantitativa\\
+\hline
+\scriptsize
+Independiente&
+\scriptsize
+Referente&
+\scriptsize
+Ejemplo de plan desde Referente&
+\scriptsize
+Grafo&
+\scriptsize
+Tupla&
+\scriptsize
+Cuantitativa\\
+\hline
+\scriptsize
+Independiente&
+\scriptsize
+Curso&
+\scriptsize
+Ejemplo de curso con Unidades de Conocimiento&
+\scriptsize
+Grafo&
+\scriptsize
+Tupla&
+\scriptsize
+Cuantitativa\\
+\hline
+\scriptsize
+Dependiente&
+\scriptsize
+MCSC&
+\scriptsize
+Subgrafo común&
+\scriptsize
+Grafo&
+\scriptsize
+Tupla&
+\scriptsize
+Cuantitativa\\
+\hline
+\scriptsize
+Dependiente&
+\scriptsize
+Similaridad&
+\scriptsize
+Una métrica resultante&
+\scriptsize
+Valor real&
+\scriptsize
+Numero&
+\scriptsize
+Cuantitativa\\
+\hline
+\scriptsize
+Dependiente&
+\scriptsize
+Nodos Comunes&
+\scriptsize
+Una proporción resultante&
+\scriptsize
+Valor real&
+\scriptsize
+Numero&
+\scriptsize
+Cuantitativa\\
+\hline
+\end{tabularx}
+\label{tab:opvar}
+\end{table}
+
+En  \ref{tab:opvar} se indica la tabla de operacionalización de las variables del estudio. Los planes y los referentes se van a modelar como grafos etiquetados, siendo el identificador un nombre que será el resumen de un conjunto de nombres comunes para curso o áreas de conocimientos. El objetivo es bajo juicio experto y usando trabajos previos poder organizar la identificación de los grafos. Por ejemplo si un curso en un plan de estudios de la universidad A se llama Sistemas Operativos, y otro curso en una universidad B se llama Sistemas Operativos y Redes, en el modelamiento se llama Sistemas Operativos que equivale a ambos cursos. Es posible poder agrupar con un solo nombre los 2 cursos como Sistemas Operativos, aún cuando podría existir diferencias y enfoques desde una concepción teórica o aplicada. Ese detalle se deberá revisar para evitar errores en el proceso de modelamiento.
+
+\newpage
+
+\section{Matriz de consistencia}
+
+\begin{table}[h]
+\centering
+\caption{Matriz de consistencia}
+\begin{tabularx}{1.0\textwidth}
+{ 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X 
+  | >{\raggedright\arraybackslash}X |}
+ \hline
+Problema&Objetivos&Hipotesis&Variables&Método\\
+\hline
+\scriptsize
+\textbf{Problema Principal}\break 
+¿Que relaciones podemos identificar en los planes de estudio de programas de informática con otros planes o guías internacionales?&
+\scriptsize
+\textbf{Objetivo General}\break
+Adaptar y aplicar conceptos de redes y similaridad de grafos en el análisis de relaciones entre programas de estudios y guias de perfiles profesionales.&
+\scriptsize
+\textbf{Hipótesis General}\break
+Identificación de relación entre grafos de modo que supere un umbral de similaridad.&
+\scriptsize
+\textbf{Variables}\break
+Planes, Guia, Cursos&
+\scriptsize
+\textbf{Tipo de investigación}\break
+Aplicación de algoritmos de grafos y similaridad.\\
+\hline
+\scriptsize
+\textbf{Problema Secundario}\break
+\begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
+\item ¿Que relaciones existe entre los programas de estudio  y referentes internacionales en distintos periodos de tiempo?
+\item ¿Que relaciones existe entre los planes de estudio en distintos periodos de tiempo o distintas casas de estudio?
+\end{enumerate}&
+\scriptsize
+\textbf{Objetivos Secundario}\break
+\begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
+\item Encontrar similaridad entre planes y guias de perfiles.
+\item Encontrar similaridad entre planes en distintos periodos o casas de estudio.
+\end{enumerate}&
+\scriptsize
+\textbf{Hipótesis Secundaria}\break
+Identificación de relación entre grafos de modo que supere un umbral de similaridad.
+\begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
+\item $G_1$ ing. de sistemas o informática y $G_2$ guia internacional de ACM/IEEE.
+\item $G_1$ que representa el plan de estudio de una carrera vinculada X y $G_2$ un plan de la misma carrera pero del año Y. 
+\end{enumerate}&
+\scriptsize
+\textbf{Variables Secundarias}\break
+\begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
+\item $G_1$, $G_2$, Identificar similaridad
+\item $G_1$, $G_2$, Identificar similaridad
+\end{enumerate}&
+\scriptsize
+\textbf{Método}\break
+\begin{enumerate}[wide, labelwidth=!, labelindent=0pt]
+\item Aplicación de algoritmo MCS
+\item Aplicación de algoritmo MCS
+\end{enumerate}\\
+\hline
+\end{tabularx}
+\label{tab:matcon}
+\end{table}
